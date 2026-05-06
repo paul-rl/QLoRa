@@ -1,0 +1,31 @@
+{
+  "mode": "fp4",
+  "train_time_sec": 19090.95570206642,
+  "memory": {
+    "after_model_load": {
+      "allocated_gb": 7.309892654418945,
+      "reserved_gb": 16.869140625,
+      "peak_allocated_gb": 14.707972526550293,
+      "peak_reserved_gb": 16.869140625
+    },
+    "before_train": {
+      "allocated_gb": 7.297197341918945,
+      "reserved_gb": 16.869140625,
+      "peak_allocated_gb": 7.297197341918945,
+      "peak_reserved_gb": 16.869140625
+    },
+    "after_train": {
+      "allocated_gb": 7.3227105140686035,
+      "reserved_gb": 18.521484375,
+      "peak_allocated_gb": 16.252606868743896,
+      "peak_reserved_gb": 18.521484375
+    }
+  },
+  "trainer_metrics": {
+    "train_runtime": 19090.783,
+    "train_samples_per_second": 2.619,
+    "train_steps_per_second": 0.327,
+    "total_flos": 2.2967293552032154e+18,
+    "train_loss": 0.9344626650238037
+  }
+}

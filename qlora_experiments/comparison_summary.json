@@ -1,0 +1,95 @@
+{
+  "nf4": {
+    "mode": "nf4",
+    "train_time_sec": 19373.754961013794,
+    "memory": {
+      "after_model_load": {
+        "allocated_gb": 7.294023513793945,
+        "reserved_gb": 18.83203125,
+        "peak_allocated_gb": 14.695075988769531,
+        "peak_reserved_gb": 18.83203125
+      },
+      "before_train": {
+        "allocated_gb": 7.281328201293945,
+        "reserved_gb": 18.83203125,
+        "peak_allocated_gb": 7.281328201293945,
+        "peak_reserved_gb": 18.83203125
+      },
+      "after_train": {
+        "allocated_gb": 7.3227105140686035,
+        "reserved_gb": 18.869140625,
+        "peak_allocated_gb": 16.252606868743896,
+        "peak_reserved_gb": 18.869140625
+      }
+    },
+    "trainer_metrics": {
+      "train_runtime": 19373.5967,
+      "train_samples_per_second": 2.581,
+      "train_steps_per_second": 0.323,
+      "total_flos": 2.2967293552032154e+18,
+      "train_loss": 0.9234113124847412
+    }
+  },
+  "fp4": {
+    "mode": "fp4",
+    "train_time_sec": 19090.95570206642,
+    "memory": {
+      "after_model_load": {
+        "allocated_gb": 7.309892654418945,
+        "reserved_gb": 16.869140625,
+        "peak_allocated_gb": 14.707972526550293,
+        "peak_reserved_gb": 16.869140625
+      },
+      "before_train": {
+        "allocated_gb": 7.297197341918945,
+        "reserved_gb": 16.869140625,
+        "peak_allocated_gb": 7.297197341918945,
+        "peak_reserved_gb": 16.869140625
+      },
+      "after_train": {
+        "allocated_gb": 7.3227105140686035,
+        "reserved_gb": 18.521484375,
+        "peak_allocated_gb": 16.252606868743896,
+        "peak_reserved_gb": 18.521484375
+      }
+    },
+    "trainer_metrics": {
+      "train_runtime": 19090.783,
+      "train_samples_per_second": 2.619,
+      "train_steps_per_second": 0.327,
+      "total_flos": 2.2967293552032154e+18,
+      "train_loss": 0.9344626650238037
+    }
+  },
+  "baseline": {
+    "mode": "baseline",
+    "train_time_sec": 0.5042142868041992,
+    "memory": {
+      "after_model_load": {
+        "allocated_gb": 14.998788833618164,
+        "reserved_gb": 15.03125,
+        "peak_allocated_gb": 14.998849868774414,
+        "peak_reserved_gb": 15.03125
+      },
+      "before_train": {
+        "allocated_gb": 14.998788833618164,
+        "reserved_gb": 15.03125,
+        "peak_allocated_gb": 14.998788833618164,
+        "peak_reserved_gb": 15.03125
+      },
+      "after_train": {
+        "allocated_gb": 15.049692630767822,
+        "reserved_gb": 16.697265625,
+        "peak_allocated_gb": 16.133610248565674,
+        "peak_reserved_gb": 16.697265625
+      }
+    },
+    "trainer_metrics": {
+      "train_runtime": 0.368,
+      "train_samples_per_second": 2.718,
+      "train_steps_per_second": 2.718,
+      "total_flos": 30152126029824.0,
+      "train_loss": 1.1319793462753296
+    }
+  }
+}
