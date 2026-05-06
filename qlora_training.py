@@ -11,8 +11,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import LoraConfig, TaskType, get_peft_model, prepare_model_for_kbit_training
 from trl import SFTTrainer, SFTConfig
 
-model_name = "./Meta-Llama-3-8B-Instruct"
-dataset_name = "./ultrachat_200k"
+model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
+dataset_name = "HuggingFaceH4/ultrachat_200k"
 output_root = "qlora_experiments_extra"
 
 seed = 42
@@ -53,7 +53,7 @@ def build_model(mode):
     """
     bf16_supported = torch.cuda.is_bf16_supported()
 
-    tokenizer = AutoTokenizer.from_pretrained(model_name, local_files_only=True)
+    tokenizer = AutoTokenizer.from_pretrained(model_name, token=True)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
@@ -71,8 +71,8 @@ def build_model(mode):
             model_name,
             quantization_config=quantization_config,
             dtype=model_dtype,
-            device_map={"": 0},
-            local_files_only=True
+            device_map="auto",
+            token=True
         )
 
         model = prepare_model_for_kbit_training(model)
@@ -80,8 +80,8 @@ def build_model(mode):
         model = AutoModelForCausalLM.from_pretrained(
             model_name,
             dtype=model_dtype,
-            device_map={"": 0},
-            local_files_only=True
+            device_map="auto",
+            token=True
         )
 
     model.config.pad_token_id = tokenizer.pad_token_id
