@@ -70,28 +70,17 @@ Or, in Google Colab, add them via **Secrets** (the 🔑 panel in the left sideba
 
 ---
 
-## Local Paths Expected by the Code
-
-The training script expects the model and dataset to be downloaded locally. Before running `qlora_training.py`, place them at these paths relative to the project root:
-
-| Path | Contents |
-|---|---|
-| `./Meta-Llama-3-8B-Instruct` | Local copy of the Llama 3 8B Instruct model |
-| `./ultrachat_200k` | Local copy of the UltraChat 200k dataset |
-
-Training outputs (adapter weights + `results.json`) are saved under `qlora_experiments_extra/`.
-
----
-
 ## Usage
 
 ### 1. Training
 
-Runs all three configurations (NF4, FP4, baseline) sequentially and saves a `comparison_summary.json`:
+Runs all three configurations (NF4, FP4, baseline) sequentially and saves a `comparison_summary.json`. The model (`meta-llama/Meta-Llama-3-8B-Instruct`) and dataset (`HuggingFaceH4/ultrachat_200k`) are downloaded automatically from the Hugging Face Hub — make sure `HF_TOKEN` is set first.
 
 ```bash
 python qlora_training.py
 ```
+
+Training outputs (adapter weights + `results.json`) are saved under `qlora_experiments_extra/`.
 
 ### 2. MMLU Evaluation
 
