@@ -6,6 +6,8 @@ from pathlib import Path
 BASE_MODEL = "meta-llama/Meta-Llama-3-8B-Instruct"
 
 TASK = "mmlu_high_school_computer_science"
+# TASK = "mmlu_college_computer_science"
+
 NUM_FEWSHOT = 5
 BATCH_SIZE = 1
 DTYPE = "float32"
